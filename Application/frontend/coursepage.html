@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Page</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        color: white;
+        padding: 14px 16px;
+    }
+    .navbar h1 {
+        float: left;
+        color: white;
+        margin: 0;
+    }
+    .course-header {
+        background-color: #ffc0cb; /* Light pink */
+        color: #333;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+    }
+    .course-header h2 {
+        margin: 0;
+    }
+    .instructors {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .instructor-dot {
+        height: 15px;
+        width: 15px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 5px;
+    }
+    .content {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .module {
+        background-color: #fdd5b1; /* Light orange */
+        padding: 20px;
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    .video-player {
+        background-color: #fff;
+        padding: 20px;
+        width: 65%;
+        height: 200px; /* Placeholder for video player height */
+        border: 1px solid #ddd;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Course Page</h1>
+</div>
+
+<div class="course-header">
+    <h2>Course Name</h2>
+    <small>Course Code</small>
+    <div class="instructors">
+        <span class="instructor-dot"></span>
+        <span class="instructor-dot"></span>
+        <span class="instructor-dot"></span>
+        <!-- Add more dots for more instructors -->
+    </div>
+</div>
+
+<div class="content">
+    <div>
+        <div class="module">Module 1</div>
+        <div class="module">Module 2</div>
+        <div class="module">Module 3</div>
+    </div>
+    <div class="video-player">
+        <!-- Placeholder for actual video player -->
+        Introductory Video
+    </div>
+</div>
+
+</body>
+</html>

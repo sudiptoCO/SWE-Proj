@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course List</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        color: white;
+        padding: 14px 16px;
+    }
+    .navbar h1 {
+        float: left;
+        color: white;
+        margin: 0;
+    }
+    .course-container {
+        width: 80%;
+        margin: 0 auto; /* Centers the container */
+        padding: 20px;
+        background-color: #fff;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+    .course {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative; /* For absolute positioning of status */
+    }
+    .course h2 {
+        margin: 0;
+        color: #333;
+    }
+    .status {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 0.9em;
+    }
+    .completed {
+        background-color: #28a745; /* Green */
+    }
+    .in-progress {
+        background-color: #ffc107; /* Yellow */
+        color: #333; /* For better contrast */
+    }
+    .yet-to-start {
+        background-color: #dc3545; /* Red */
+    }
+    .sort-bar {
+        padding: 10px;
+        background-color: #fff;
+        margin: 20px auto 0 auto;
+        width: 80%;
+        text-align: right;
+        border: 1px solid #ddd;
+        border-top: none;
+    }
+    .sort-bar select {
+        padding: 5px;
+        margin-left: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Courses</h1>
+</div>
+
+<div class="sort-bar">
+    All Courses
+    Sort by:
+    <select>
+        <option>All</option>
+        <option>Completed</option>
+        <option>In Progress</option>
+    </select>
+</div>
+
+<div class="course-container">
+    <div class="course completed">
+        <h2>Course 1</h2>
+        <div class="status completed">Completed</div>
+    </div>
+    <div class="course completed">
+        <h2>Course 2</h2>
+        <div class="status completed">Completed</div>
+    </div>
+    <div class="course yet-to-start">
+        <h2>Course 3</h2>
+        <div class="status yet-to-start">Yet to start</div>
+    </div>
+    <div class="course in-progress">
+        <h2>Course 4</h2>
+        <div class="status in-progress">In Progress</div>
+    </div>
+    <div class="course yet-to-start">
+        <h2>Course 5</h2>
+        <div class="status yet-to-start">Yet to start</div>
+    </div>
+</div>
+
+</body>
+</html>

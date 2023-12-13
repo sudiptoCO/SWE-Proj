@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        color: white;
+        padding: 14px 16px;
+    }
+    .navbar div {
+        float: left;
+    }
+    .navbar a {
+        float: right;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .profile-header {
+        background-color: #f4a460;
+        padding: 20px;
+        text-align: center;
+    }
+    .profile-photo-container {
+        display: flex;
+        justify-content: center;
+        margin-top: -50px;
+    }
+    .profile-photo {
+        background-color: #fdd5b1;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .details-section, .courses-section {
+        background-color: #add8e6;
+        border-radius: 15px;
+        padding: 20px;
+        width: calc(50% - 40px);
+    }
+    .sub-section {
+        background-color: #fff;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 10px;
+        height: 100px;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div>Profile</div>
+    <!-- Add additional links or buttons here -->
+</div>
+
+<div class="profile-header">
+    Cover Photo
+</div>
+
+<div class="profile-photo-container">
+    <div class="profile-photo">Profile Photo</div>
+</div>
+
+<div class="content">
+    <div class="details-section">
+        <h3>Student Details</h3>
+        <div class="sub-section">Interests, goals, certifications</div>
+        <!-- Add more sub-sections as needed -->
+    </div>
+    <div class="courses-section">
+        <h3>Completed Courses</h3>
+        <!-- List courses here -->
+        <div class="sub-section"></div>
+        <!-- Add more sub-sections as needed -->
+    </div>
+</div>
+
+</body>
+</html>

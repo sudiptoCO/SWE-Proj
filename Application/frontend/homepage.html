@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Dashboard</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        color: white;
+        padding: 14px 16px;
+    }
+    .navbar a {
+        float: right;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .content {
+        padding: 20px;
+    }
+    .courses-container, .recommended-container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    .course, .path {
+        border-radius: 15px;
+        padding: 30px;
+        width: 200px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .course {
+        background-color: #ffc0cb; /* Light pink */
+    }
+    .path {
+        background-color: #add8e6; /* Light blue */
+    }
+    h2 {
+        text-align: center;
+        margin: 20px 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div>Homepage</div>
+    <a href="login.html">Sign out</a>
+    <a href="/feedback">Help & feedback</a>
+    <a href="/courses">Courses</a>
+    <a href="profile.html">Profile</a>
+</div>
+
+<div class="content">
+    <h2>Current Courses</h2>
+    <div class="courses-container">
+        <div class="course">Course 1</div>
+        <div class="course">Course 2</div>
+    </div>
+    
+    <hr>
+    
+    <h2>Recommended courses</h2>
+    <div class="recommended-container">
+        <div class="path">Path 1</div>
+        <div class="path">Path 2</div>
+    </div>
+</div>
+
+</body>
+</html>
