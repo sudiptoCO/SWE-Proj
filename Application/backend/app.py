@@ -1,21 +1,13 @@
-import os
 from flask import Flask
-from application.config import LocalDevelopmentConfig
-from application.database import db
-def create_app():
-    app = Flask(__name__, template_folder="templates")
+from controllers import api
 
-    app.config.from_object(LocalDevelopmentConfig)
-    app.secret_key = os.urandom(24)
+app = Flask(__name__)
+app.register_blueprint(api)
 
-    db.init_app(app)
-    app.app_context().push()
-    
-    return app
-
-app = create_app()
-
-from application.controllers import *
+# Home route (optional)
+@app.route("/", methods=["GET"])
+def index():
+    return "Welcome to your Flask application!"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(debug=True)

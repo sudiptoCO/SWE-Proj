@@ -1,43 +1,64 @@
-from Application.backend.database import db 
+class Course():
+    def __init__(self, course_id, course_name, credits, fees, instructors):
+        self.course_id = course_id
+        self.course_name = course_name
+        self.credits = credits
+        self.fees = fees
+        self.instructors = instructors
 
-class Course(db.Model):
-    __tablename__ = 'course'
-    course_id = db.Column(db.Integer, autoincrement=True, primary_key=True, unique=True)
-    course_name = db.Column(db.String, unique=True, nullable=False)
-    credits = db.Column(db.Integer, nullable=False)
-    fees = db.Column(db.Integer, nullable=False)
-    instructors = db.Column(db.String, nullable=False)
+class User():
+    def __init__(self, user_id, username, fullname, password, email, dob):
+        self.user_id = user_id
+        self.username = username
+        self.fullname = fullname
+        self.password = password
+        self.email = email
+        self.dob = dob
 
-class User(db.Model):
-    __tablename__ = 'user'
-    user_id = db.Column(db.Integer, autoincrement=True, primary_key=True, unique=True)
-    user_name = db.Column(db.String, unique=True, nullable=False)
-    fullname = db.Column(db.String, nullable=False)
-    password = db.Column(db.String, nullable=False)
-    email = db.Column(db.String, nullable=False)
-    dob = db.Column(db.String, nullable=False)
+class LearningProfile():
+    def __init__(self, learning_profile_id, student_id, interests, schedule, goals, commitments):
+        self.learning_profile_id = learning_profile_id
+        self.student_id = student_id
+        self.interests = interests
+        self.schedule = schedule
+        self.goals = goals
+        self.commitments = commitments
 
-class Student(db.Model,User):
-    __tablename__ = 'student'
-    student_id = db.Column(db.Integer, autoincrement=True, primary_key=True, unique=True)
-    roll_no = db.Column(db.String, unique=True, nullable=False)
-    # learning_profile = db.Column(db.String, nullable=False)
-    cgpa = db.Column(db.Integer, nullable=False)
-    # completed_course = db.Column(db.String, nullable=False)
-    # pending_courses = db.Column(db.String, nullable=False)
+class Student():
+    def __init__(self, student_id, roll_no, learning_profile, cgpa, completed_courses, pending_courses):
+        self.student_id = student_id
+        self.roll_no = roll_no
+        self.learning_profile = learning_profile
+        self.cgpa = cgpa
+        self.completed_courses = completed_courses
+        self.pending_courses = pending_courses
+        
+class Feedback():
+    def __init__(self, course_id, student_id, text, ratings):
+        self.course_id = course_id
+        self.student_id = student_id
+        self.text = text
+        self.ratings = ratings
 
-class LearningProfile(db.Model):
-    __tablename__ = 'learning_profile'
-    learning_profile_id = db.Column(db.Integer, autoincrement=True, primary_key=True, unique=True)
-    student_id = db.Column(db.Integer, unique=True, nullable=False)
-    interests = db.Column(db.String, unique=True, nullable=False)
-    schedule = db.Column(db.String, unique=True, nullable=False)
-    goals = db.Column(db.String, unique=True, nullable=False)
-    commitments = db.Column(db.String, unique=True, nullable=False)
 
-class Feedback(db.Model):
-    __tablename__ = 'feedback'
-    course_id = db.Column(db.Integer, autoincrement=True, primary_key=True, unique=True)
-    student_id = db.Column(db.Integer, unique=True, nullable=False)
-    text = db.Column(db.String, unique=True, nullable=False)
-    ratings = db.Column(db.Integer, unique=True, nullable=False)
+
+# class Dictionary():
+#     def to_dict(self):
+#         return {k:v for k,v in self.__dict__.items()}
+    
+
+class Task():
+    def __init__(self, id, title, description, completed=False):
+        self.id = id
+        self.title = title
+        self.description = description
+        self.completed = completed
+
+    # def to_dict(self):
+    #     return {
+    #         "id": self.id,
+    #         "title": self.title,
+    #         "description": self.description,
+    #         "completed": self.completed,
+    #     }
+
