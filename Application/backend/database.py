@@ -23,20 +23,37 @@ learning_profile = [
 ]
 
 # inerit user class?
-students = [
-    Student(student_id=1,
+users = [
+    Student(user_id=1,
+            username='student1',
+            fullname='student1',
+            password='student1',
+            email='student1@domain.com',
+            dob='1/1/2000',
             roll_no='21f1001051',
             learning_profile=learning_profile[0],
+            cgpa=4,
+            completed_courses=['Math', 'Science'], 
+            pending_courses=['Eng', 'Esp']),
+
+    Student(user_id=2,
+            username='student2',
+            fullname='student2',
+            password='student2',
+            email='student2@domain.com',
+            dob='1/1/2000',
+            roll_no='21f1001052',
+            learning_profile=learning_profile[1],
             cgpa=4,
             completed_courses=None, 
             pending_courses=None),
 
-    Student(student_id=2,
-            roll_no='21f1001051',
-            learning_profile=learning_profile[1],
-            cgpa=4.4,
-            completed_courses=None, 
-            pending_courses=None)           
+    Admin(user_id=3,
+          username='admin1',
+          fullname='admin1',
+          password='admin1',
+          email='admin1@domain.com',
+          dob='1/1/2000')
 ]
 
 courses = [
@@ -44,11 +61,43 @@ courses = [
            course_name='Course A',
            credits=3,
            fees=4,
-           instructors='instructors A'),
+           instructor='instructor A'),
 
     Course(course_id=2,
            course_name='Course B',
            credits=6,
            fees=23,
-           instructors='instructors B'),
+           instructor='instructor B'),
+    
+    Course(course_id=3,
+           course_name='Course C',
+           credits=6,
+           fees=23,
+           instructor='instructor B'),
+    
+    Course(course_id=4,
+           course_name='Course D',
+           credits=6,
+           fees=23,
+           instructor='instructor C'),
+    
+    Course(course_id=5,
+           course_name='Course E',
+           credits=6,
+           fees=23,
+           instructor='instructor B'),
+]
+
+feedbacks = [
+    Feedback(feedback_id=1,
+             course_id=1,
+             student_id=1,
+             text='Good',
+             ratings=3),
+
+    Feedback(feedback_id=2,
+             course_id=1,
+             student_id=2,
+             text='Excellent',
+             ratings=5)
 ]

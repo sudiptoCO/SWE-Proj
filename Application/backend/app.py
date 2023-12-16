@@ -1,13 +1,10 @@
 from flask import Flask
 from controllers import api
+import os
 
 app = Flask(__name__)
 app.register_blueprint(api)
-
-# Home route (optional)
-@app.route("/", methods=["GET"])
-def index():
-    return "Welcome to your Flask application!"
+app.secret_key = os.urandom(24)
 
 if __name__ == "__main__":
     app.run(debug=True)
