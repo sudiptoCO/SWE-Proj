@@ -1,11 +1,6 @@
 from models import *
 
 # In-memory database
-tasks = [
-    Task(1, "Finish this tutorial", "Learn Flask basics"),
-    Task(2, "Buy groceries", "Milk, eggs, bread"),
-]
-
 learning_profile = [
     LearningProfile(learning_profile_id=1,
                     student_id=1,
@@ -22,7 +17,6 @@ learning_profile = [
                     commitments=['commitments 5', 'commitments 6'])
 ]
 
-# inerit user class?
 users = [
     Student(user_id=1,
             username='student1',

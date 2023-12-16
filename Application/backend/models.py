@@ -50,26 +50,3 @@ class Feedback():
         self.student_id = student_id
         self.text = text
         self.ratings = ratings
-
-
-
-# class Dictionary():
-#     def to_dict(self):
-#         return {k:v for k,v in self.__dict__.items()}
-    
-
-class Task():
-    def __init__(self, id, title, description, completed=False):
-        self.id = id
-        self.title = title
-        self.description = description
-        self.completed = completed
-
-    # def to_dict(self):
-    #     return {
-    #         "id": self.id,
-    #         "title": self.title,
-    #         "description": self.description,
-    #         "completed": self.completed,
-    #     }
-
